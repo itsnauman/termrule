@@ -13,6 +13,7 @@ setup(
     packages=['tr'],
     install_requires=[
         'termcolor',
+        'future',
     ],
     entry_points='''
         [console_scripts]
