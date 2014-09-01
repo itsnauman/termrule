@@ -29,18 +29,27 @@ class TermRule(object):
         except:
             raise InvalidColorException("Invalid Color Name!")
 
-    def parse_args(self):
+    @classmethod
+    def _parse_args(cls):
         """
         Method to parse command line arguments
         """
-        self.parser = argparse.ArgumentParser()
-        self.parser.add_argument(
+        cls.parser = argparse.ArgumentParser()
+        cls.parser.add_argument(
             "symbol", help="Symbol for horizontal line", nargs="*")
-        self.parser.add_argument(
+        cls.parser.add_argument(
             "--color", "-c", help="Color of the line", default=None, nargs=1)
-        self.parser.add_argument(
+        cls.parser.add_argument(
             "--version", "-v", action="version", version="0.13")
-        self.args = self.parser.parse_args()
+
+        return cls.parser
+
+    def run_args(self):
+        """
+        Pass in the parsed args to the script
+        """
+        self.arg_parser = self._parse_args()
+        self.args = self.arg_parser.parse_args()
         color_name = self.args.color
         if color_name is not None:
             color_name = color_name[0]
@@ -109,7 +118,7 @@ def main():
     Main function for the entry point in setup.py
     """
     app = TermRule()
-    app.parse_args()
+    app.run_args()
 
 if __name__ == "__main__":
     # If this program is run as a script
