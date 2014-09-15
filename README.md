@@ -59,6 +59,8 @@ $ rl "*-*" --color red
 >>> r.tr(["@-@"])
 @-@@-@@-@@-@@-@@-@@-@@-@@-@@-@@-@@-@@
 ```
+### Tests:
+Unitests is used as the testing library, run `python test_termrule.py` to see all tests pass :)
 
 ### Dependencies:
 `termcolor` is the only dependency; it is used for colored outputs, and I hope you know that `python 2.7` or `python 3.4` is also required (isn't that obvious?)
