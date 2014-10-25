@@ -1,3 +1,15 @@
+"""
+ _                                   _      
+| |_ ___ _ __ _ __ ___    _ __ _   _| | ___ 
+| __/ _ \ '__| '_ ` _ \  | '__| | | | |/ _ \
+| ||  __/ |  | | | | | | | |  | |_| | |  __/
+ \__\___|_|  |_| |_| |_| |_|   \__,_|_|\___|
+ 
+author: Nauman Ahmad
+description: Provide a coloured horizontal rule for your terminal.
+version: 0.14
+license: MIT
+"""
 from __future__ import print_function
 from __future__ import division
 
